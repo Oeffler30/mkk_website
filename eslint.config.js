@@ -40,5 +40,12 @@ export default defineConfig(
 		// Override or add rule settings here, such as:
 		// 'svelte/button-has-type': 'error'
 		rules: {}
+	},
+	{
+		files: ['src/routes/+layout.svelte', 'src/lib/components/CookieBanner.svelte'],
+		rules: {
+			// Hrefs use `appResolve()` so Paraglide `./…` paths from SSR are normalized before `resolve()`.
+			'svelte/no-navigation-without-resolve': 'off'
+		}
 	}
 );

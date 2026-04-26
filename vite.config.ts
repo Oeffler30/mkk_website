@@ -8,7 +8,22 @@ export default defineConfig({
 	plugins: [
 		tailwindcss(),
 		sveltekit(),
-		paraglideVitePlugin({ project: './project.inlang', outdir: './src/lib/paraglide' })
+		paraglideVitePlugin({
+			project: './project.inlang',
+			outdir: './src/lib/paraglide',
+			strategy: ['url', 'cookie', 'preferredLanguage', 'baseLocale'],
+			urlPatterns: [
+				{
+					pattern: '/:path(.*)?',
+					// English must come first: the German pattern `/:path(.*)?` matches any path,
+					// so `/en/home` would incorrectly capture path=`en/home` and break de-localization.
+					localized: [
+						['en', '/en/:path(.*)?'],
+						['de', '/:path(.*)?']
+					]
+				}
+			]
+		})
 	],
 	test: {
 		expect: { requireAssertions: true },

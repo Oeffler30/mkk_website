@@ -1,3 +1,73 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@theme {
+	--font-display: 'Bebas Neue', ui-sans-serif, system-ui, sans-serif;
+	--font-body: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+	/* Fixed header: lang strip + nav (+ safe area). Slightly generous to avoid overlap when nav wraps. */
+	--mkk-lang-strip: 2.75rem;
+	--mkk-nav-strip: 6rem;
+}
+
+/* Total fixed header height (spacer, mobile menu backdrop top). */
+:root {
+	--mkk-header-stack: calc(
+		env(safe-area-inset-top, 0px) + var(--mkk-lang-strip) + var(--mkk-nav-strip)
+	);
+}
+
+@layer base {
+	html {
+		@apply antialiased;
+		scroll-behavior: smooth;
+		overflow-x: clip;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+
+	body {
+		font-family: var(--font-body);
+		@apply bg-zinc-950 text-zinc-200;
+		overflow-x: clip;
+	}
+
+	html.mkk-mobile-nav-open {
+		overflow: hidden;
+	}
+
+	::selection {
+		@apply bg-red-900/80 text-white;
+	}
+}
+
+/* Reserve space under fixed header (safe area + two strips). */
+.mkk-header-scroll-spacer {
+	height: var(--mkk-header-stack);
+}
+
+/* Slightly cheaper paint than heavy blur on a fixed layer */
+/* Opaque surface avoids expensive full-viewport backdrop-blur on a fixed layer. */
+.mkk-fixed-header-surface {
+	background-color: rgb(9 9 11 / 0.98);
+	box-shadow: 0 1px 0 rgb(69 10 10 / 0.35);
+}
+
+.mkk-footer-slab {
+	content-visibility: auto;
+	contain-intrinsic-size: auto 12rem;
+}
+
+@layer components {
+	/* Main nav text links: visible “you are here” state (paired with aria-current="page"). */
+	.mkk-nav-entry {
+		@apply inline-flex min-h-11 items-center rounded-md px-2 text-sm font-semibold tracking-wide text-zinc-400 uppercase transition-colors hover:text-red-400 active:text-red-300;
+	}
+	.mkk-nav-entry[aria-current='page'] {
+		@apply bg-red-950/60 text-red-100 shadow-[inset_0_0_0_1px_rgb(127_29_29/0.55)] hover:text-red-50;
+	}
+}
