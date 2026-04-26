@@ -135,7 +135,7 @@
 		</div>
 
 		<nav
-			class="relative mx-auto w-full max-w-6xl px-3 py-2.5 sm:px-6 sm:py-3 lg:max-w-5xl lg:pr-10 lg:pl-4 xl:max-w-[66rem] xl:pr-12 xl:pl-5"
+			class="relative mx-auto w-full max-w-6xl px-3 py-2.5 sm:px-6 sm:py-3 lg:max-w-5xl lg:pr-10 lg:pl-4 xl:max-w-264 xl:pr-12 xl:pl-5"
 			aria-label={m.nav_aria_main({}, msg)}
 		>
 			<div
