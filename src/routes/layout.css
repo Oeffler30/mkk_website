@@ -64,6 +64,11 @@
 
 @layer components {
 	/* Main nav text links: visible “you are here” state (paired with aria-current="page"). */
+	/* PNG is generated from `metal-horns.svg` via `npm run build:cursor` (browsers cap cursor size). */
+	.mkk-cursor-metal:hover {
+		cursor: url('/cursors/metal-horns-cursor.png') 24 24, pointer;
+	}
+
 	.mkk-nav-entry {
 		@apply inline-flex min-h-11 items-center rounded-md px-2 text-sm font-semibold tracking-wide text-zinc-400 uppercase transition-colors hover:text-red-400 active:text-red-300;
 	}

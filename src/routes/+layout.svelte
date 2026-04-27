@@ -126,7 +126,7 @@
 				>
 					<a
 						href={deHref}
-						class="inline-flex min-h-11 min-w-11 items-center justify-center rounded px-2 transition-colors sm:min-w-11 {locale ===
+						class="mkk-cursor-metal inline-flex min-h-11 min-w-11 items-center justify-center rounded px-2 transition-colors sm:min-w-11 {locale ===
 						'de'
 							? 'bg-red-950 text-red-100'
 							: 'text-zinc-500 hover:text-zinc-200 active:bg-zinc-800'}"
@@ -137,7 +137,7 @@
 					</a>
 					<a
 						href={enHref}
-						class="inline-flex min-h-11 min-w-11 items-center justify-center rounded px-2 transition-colors sm:min-w-11 {locale ===
+						class="mkk-cursor-metal inline-flex min-h-11 min-w-11 items-center justify-center rounded px-2 transition-colors sm:min-w-11 {locale ===
 						'en'
 							? 'bg-red-950 text-red-100'
 							: 'text-zinc-500 hover:text-zinc-200 active:bg-zinc-800'}"
@@ -159,7 +159,7 @@
 			>
 				<a
 					href={homeHref}
-					class="flex min-h-11 max-w-[min(70vw,15rem)] shrink-0 items-center rounded-md py-1 sm:max-w-[min(55vw,16rem)] lg:max-w-[18rem] lg:-translate-x-1 xl:-translate-x-2"
+					class="mkk-cursor-metal flex min-h-11 max-w-[min(70vw,15rem)] shrink-0 items-center rounded-md py-1 sm:max-w-[min(55vw,16rem)] lg:max-w-[18rem] lg:-translate-x-1 xl:-translate-x-2"
 					aria-label={m.nav_home({}, msg)}
 				>
 					<img
@@ -172,7 +172,7 @@
 
 				<button
 					type="button"
-					class="inline-flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded-md border border-zinc-700 bg-zinc-900 text-zinc-200 transition-colors hover:border-zinc-600 hover:bg-zinc-800 lg:hidden"
+					class="mkk-cursor-metal inline-flex min-h-11 min-w-11 shrink-0 items-center justify-center rounded-md border border-zinc-700 bg-zinc-900 text-zinc-200 transition-colors hover:border-zinc-600 hover:bg-zinc-800 lg:hidden"
 					aria-expanded={navOpen}
 					aria-controls="mkk-main-menu"
 					aria-label={navOpen ? m.nav_menu_close({}, msg) : m.nav_menu_open({}, msg)}
@@ -207,7 +207,7 @@
 					{#each mainNav as item (item.path)}
 						<a
 							href={item.href}
-							class="mkk-nav-entry"
+							class="mkk-cursor-metal mkk-nav-entry"
 							aria-current={currentPath === item.path ? 'page' : undefined}
 						>
 							{item.label()}
@@ -227,7 +227,7 @@
 					{#each mainNav as item (item.path)}
 						<a
 							href={item.href}
-							class="mkk-nav-entry flex w-full justify-start px-4 py-3.5 text-base"
+							class="mkk-cursor-metal mkk-nav-entry flex w-full justify-start px-4 py-3.5 text-base"
 							aria-current={currentPath === item.path ? 'page' : undefined}
 							onclick={closeMobileNav}
 						>
@@ -276,19 +276,19 @@
 				/>
 				<a
 					href={imprintHref}
-					class="inline-flex min-h-11 items-center justify-center rounded border border-zinc-700 bg-zinc-900/60 px-4 text-sm font-semibold tracking-wide text-zinc-300 uppercase transition-colors hover:border-red-800/60 hover:bg-red-950/30 hover:text-red-200 active:bg-red-950/50"
+					class="mkk-cursor-metal inline-flex min-h-11 items-center justify-center rounded border border-zinc-700 bg-zinc-900/60 px-4 text-sm font-semibold tracking-wide text-zinc-300 uppercase transition-colors hover:border-red-800/60 hover:bg-red-950/30 hover:text-red-200 active:bg-red-950/50"
 				>
 					{m.footer_imprint({}, msg)}
 				</a>
 				<a
 					href={privacyHref}
-					class="inline-flex min-h-11 items-center justify-center rounded border border-zinc-700 bg-zinc-900/60 px-4 text-sm font-semibold tracking-wide text-zinc-300 uppercase transition-colors hover:border-red-800/60 hover:bg-red-950/30 hover:text-red-200 active:bg-red-950/50"
+					class="mkk-cursor-metal inline-flex min-h-11 items-center justify-center rounded border border-zinc-700 bg-zinc-900/60 px-4 text-sm font-semibold tracking-wide text-zinc-300 uppercase transition-colors hover:border-red-800/60 hover:bg-red-950/30 hover:text-red-200 active:bg-red-950/50"
 				>
 					{m.footer_privacy({}, msg)}
 				</a>
 				<button
 					type="button"
-					class="inline-flex min-h-11 items-center justify-center rounded border border-zinc-700 bg-zinc-900/60 px-4 text-sm font-semibold tracking-wide text-zinc-300 uppercase transition-colors hover:border-red-800/60 hover:bg-red-950/30 hover:text-red-200 active:bg-red-950/50"
+					class="mkk-cursor-metal inline-flex min-h-11 items-center justify-center rounded border border-zinc-700 bg-zinc-900/60 px-4 text-sm font-semibold tracking-wide text-zinc-300 uppercase transition-colors hover:border-red-800/60 hover:bg-red-950/30 hover:text-red-200 active:bg-red-950/50"
 					onclick={openCookieSettings}
 				>
 					{m.footer_cookie_settings({}, msg)}

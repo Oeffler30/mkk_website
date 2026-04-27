@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import MembershipApplicationForm from '$lib/components/MembershipApplicationForm.svelte';
 	import * as m from '$lib/paraglide/messages.js';
@@ -7,7 +6,7 @@
 
 	let { form } = $props();
 
-	const locale = $derived(localeFromPathname(page.url.pathname, base));
+	const locale = $derived(localeFromPathname(page.url.pathname));
 	const msg = $derived({ locale } as const);
 </script>
 

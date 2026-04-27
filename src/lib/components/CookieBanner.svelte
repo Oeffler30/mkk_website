@@ -108,7 +108,7 @@
 			<p class="mt-2 text-pretty text-zinc-400">
 				{m.cookie_banner_lead({}, msg)}
 				<a
-					class="font-medium text-red-400 underline decoration-red-500/50 underline-offset-2 hover:text-red-300"
+					class="mkk-cursor-metal font-medium text-red-400 underline decoration-red-500/50 underline-offset-2 hover:text-red-300"
 					href={privacyHref}>{m.footer_privacy({}, msg)}</a
 				>.
 				{m.cookie_banner_more({}, msg)}
@@ -119,21 +119,21 @@
 		>
 			<button
 				type="button"
-				class="inline-flex min-h-11 items-center justify-center rounded border border-red-800/60 bg-red-950/50 px-4 text-sm font-semibold tracking-wide text-red-100 uppercase transition-colors hover:bg-red-900/60"
+				class="mkk-cursor-metal inline-flex min-h-11 items-center justify-center rounded border border-red-800/60 bg-red-950/50 px-4 text-sm font-semibold tracking-wide text-red-100 uppercase transition-colors hover:bg-red-900/60"
 				onclick={acceptAll}
 			>
 				{m.cookie_accept_all({}, msg)}
 			</button>
 			<button
 				type="button"
-				class="inline-flex min-h-11 items-center justify-center rounded border border-zinc-600 bg-zinc-900 px-4 text-sm font-semibold tracking-wide text-zinc-200 uppercase transition-colors hover:border-zinc-500 hover:bg-zinc-800"
+				class="mkk-cursor-metal inline-flex min-h-11 items-center justify-center rounded border border-zinc-600 bg-zinc-900 px-4 text-sm font-semibold tracking-wide text-zinc-200 uppercase transition-colors hover:border-zinc-500 hover:bg-zinc-800"
 				onclick={onlyNecessary}
 			>
 				{m.cookie_only_necessary({}, msg)}
 			</button>
 			<button
 				type="button"
-				class="inline-flex min-h-11 items-center justify-center rounded border border-zinc-700 px-4 text-sm font-semibold tracking-wide text-zinc-300 uppercase transition-colors hover:border-red-900/40 hover:bg-zinc-900"
+				class="mkk-cursor-metal inline-flex min-h-11 items-center justify-center rounded border border-zinc-700 px-4 text-sm font-semibold tracking-wide text-zinc-300 uppercase transition-colors hover:border-red-900/40 hover:bg-zinc-900"
 				onclick={openManage}
 			>
 				{m.cookie_manage({}, msg)}
@@ -252,14 +252,14 @@
 		>
 			<button
 				type="button"
-				class="inline-flex min-h-11 items-center justify-center rounded border border-zinc-600 px-4 text-sm font-semibold text-zinc-300 uppercase hover:bg-zinc-900"
+				class="mkk-cursor-metal inline-flex min-h-11 items-center justify-center rounded border border-zinc-600 px-4 text-sm font-semibold text-zinc-300 uppercase hover:bg-zinc-900"
 				onclick={cancelDialog}
 			>
 				{m.cookie_cancel({}, msg)}
 			</button>
 			<button
 				type="button"
-				class="inline-flex min-h-11 items-center justify-center rounded border border-red-800/60 bg-red-950/50 px-4 text-sm font-semibold tracking-wide text-red-100 uppercase hover:bg-red-900/60"
+				class="mkk-cursor-metal inline-flex min-h-11 items-center justify-center rounded border border-red-800/60 bg-red-950/50 px-4 text-sm font-semibold tracking-wide text-red-100 uppercase hover:bg-red-900/60"
 				onclick={saveCustom}
 			>
 				{m.cookie_save({}, msg)}

@@ -12,7 +12,7 @@
 	} = $props();
 
 	const iconBtnClass =
-		'inline-flex h-11 w-11 items-center justify-center rounded border border-zinc-700 bg-zinc-900/60 text-zinc-400 transition-colors hover:border-red-800/60 hover:bg-red-950/30 hover:text-red-200 active:bg-red-950/50';
+		'mkk-cursor-metal inline-flex h-11 w-11 items-center justify-center rounded border border-zinc-700 bg-zinc-900/60 text-zinc-400 transition-colors hover:border-red-800/60 hover:bg-red-950/30 hover:text-red-200 active:bg-red-950/50';
 </script>
 
 <!-- eslint-disable svelte/no-navigation-without-resolve -- external Instagram/Discord URLs -->
