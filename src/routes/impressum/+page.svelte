@@ -1,15 +1,17 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	// import { base } from '$app/paths';
 	import { page } from '$app/state';
+	import ImprintDE from '$lib/components/imprint/ImprintDE.svelte';
+	import ImprintEN from '$lib/components/imprint/ImprintEN.svelte';
 	import * as m from '$lib/paraglide/messages.js';
 	import { localeFromPathname } from '$lib/locale-from-path.js';
 
-	const locale = $derived(localeFromPathname(page.url.pathname, base));
+	const locale = $derived(localeFromPathname(page.url.pathname));
 	const msg = $derived({ locale } as const);
 </script>
 
 <svelte:head>
-	<title>{m.footer_imprint({}, msg)} — {m.site_name({}, msg)}</title>
+	<title>{m.imprint_title({}, msg)} — {m.site_name({}, msg)}</title>
 </svelte:head>
 
 <div class="mx-auto max-w-3xl px-3 py-12 sm:px-6 sm:py-20">
@@ -18,9 +20,11 @@
 	>
 		{m.imprint_title({}, msg)}
 	</h1>
-	<div
-		class="prose mt-8 max-w-none prose-invert prose-red prose-p:text-pretty prose-p:text-zinc-400"
-	>
-		<p>{m.imprint_body({}, msg)}</p>
+	<div class="mt-10">
+		{#if locale === 'de'}
+			<ImprintDE />
+		{:else}
+			<ImprintEN />
+		{/if}
 	</div>
 </div>

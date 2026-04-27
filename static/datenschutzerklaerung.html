@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung – [Vereinsname]</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --ink: #1a1a18;
+    --ink-muted: #5a5a55;
+    --ink-faint: #9a9a92;
+    --paper: #faf9f5;
+    --paper-warm: #f3f0e8;
+    --accent: #2d4a3e;
+    --accent-light: #e8efe9;
+    --rule: #d8d5cc;
+    --max-width: 780px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+
+  header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .meta {
+    font-size: 13px;
+    color: var(--ink-faint);
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .meta span { display: flex; align-items: center; gap: 6px; }
+
+  .toc {
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .toc-title {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .toc ol {
+    padding-left: 1.2rem;
+    columns: 2;
+    column-gap: 2rem;
+  }
+
+  .toc li {
+    font-size: 14px;
+    line-height: 1.8;
+    break-inside: avoid;
+  }
+
+  .toc a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .toc a:hover { text-decoration: underline; }
+
+  section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+
+  h2 .num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  p { margin-bottom: 0.9rem; color: var(--ink); }
+  p:last-child { margin-bottom: 0; }
+
+  ul, ol {
+    padding-left: 1.4rem;
+    margin-bottom: 0.9rem;
+  }
+
+  li { margin-bottom: 0.3rem; }
+
+  .highlight {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.25rem;
+    border-radius: 0 4px 4px 0;
+    margin: 1rem 0;
+  }
+
+  .highlight p { font-size: 14px; color: var(--ink); margin-bottom: 0; }
+
+  .placeholder {
+    background: #fff3cd;
+    border: 1px dashed #c8a800;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 14px;
+    color: #7a6300;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 1rem 0;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding: 0.5rem 0.75rem;
+    border-bottom: 2px solid var(--rule);
+  }
+
+  td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  .rights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .right-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1rem;
+    background: white;
+  }
+
+  .right-card strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: var(--ink);
+  }
+
+  .right-card span {
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.5;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--rule);
+    font-size: 13px;
+    color: var(--ink-faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    .toc ol { columns: 1; }
+    .page { padding: 2rem 1.25rem 4rem; }
+  }
+
+  @media print {
+    body { background: white; }
+    .page { padding: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <p class="label">Rechtliche Informationen</p>
+    <h1>Datenschutzerklärung</h1>
+    <div class="meta">
+      <span>Stand: <mark class="placeholder">Monat Jahr</mark></span>
+      <span>Gültig ab: <mark class="placeholder">Datum</mark></span>
+      <span>Rechtsgrundlage: DSGVO &amp; BDSG</span>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Inhaltsverzeichnis">
+    <p class="toc-title">Inhalt</p>
+    <ol>
+      <li><a href="#verantwortliche">Verantwortliche Stelle</a></li>
+      <li><a href="#allgemein">Allgemeine Hinweise</a></li>
+      <li><a href="#hosting">Hosting &amp; Server</a></li>
+      <li><a href="#cookies">Cookies &amp; Tracking</a></li>
+      <li><a href="#kontakt">Kontaktformular</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
+      <li><a href="#mitgliedschaft">Online-Mitgliedsantrag</a></li>
+      <li><a href="#rechte">Ihre Rechte</a></li>
+      <li><a href="#sicherheit">Datensicherheit</a></li>
+      <li><a href="#aenderungen">Änderungen</a></li>
+    </ol>
+  </nav>
+
+
+  <section id="verantwortliche">
+    <h2><span class="num">§ 1</span> Verantwortliche Stelle</h2>
+    <p>Verantwortlich für die Erhebung, Verarbeitung und Nutzung Ihrer personenbezogenen Daten im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+    <div class="highlight">
+      <p>
+        <strong><mark class="placeholder">Name des Vereins e. V.</mark></strong><br>
+        <mark class="placeholder">Straße und Hausnummer</mark><br>
+        <mark class="placeholder">PLZ Ort</mark><br><br>
+        E-Mail: <mark class="placeholder">datenschutz@vereinsname.de</mark><br>
+        Telefon: <mark class="placeholder">+49 XXX XXXXXXX</mark><br><br>
+        Vertretungsberechtigte Person: <mark class="placeholder">Vorname Nachname (1. Vorsitzende/r)</mark><br>
+        Vereinsregister: <mark class="placeholder">Amtsgericht Musterstadt, VR XXXXX</mark>
+      </p>
+    </div>
+    <p>Bei Fragen zum Datenschutz wenden Sie sich bitte an die oben genannte Kontaktadresse.</p>
+  </section>
+
+
+  <section id="allgemein">
+    <h2><span class="num">§ 2</span> Allgemeine Hinweise zur Datenverarbeitung</h2>
+    <p>Die Nutzung unserer Webseite ist grundsätzlich ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (z. B. Name, Anschrift oder E-Mail-Adresse) erhoben werden, erfolgt dies stets auf freiwilliger Basis.</p>
+    <p>Wir verarbeiten personenbezogene Daten unter Beachtung der einschlägigen Datenschutzvorschriften, insbesondere der DSGVO und des Bundesdatenschutzgesetzes (BDSG). Eine Weitergabe Ihrer Daten an Dritte findet ohne Ihre ausdrückliche Einwilligung nicht statt, sofern wir nicht gesetzlich dazu verpflichtet sind.</p>
+    <h3>Rechtsgrundlagen</h3>
+    <table>
+      <thead>
+        <tr><th>Rechtsgrundlage</th><th>Beschreibung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Art. 6 Abs. 1 lit. a DSGVO</td><td>Einwilligung der betroffenen Person</td></tr>
+        <tr><td>Art. 6 Abs. 1 lit. b DSGVO</td><td>Vertragserfüllung oder vorvertragliche Maßnahmen</td></tr>
+        <tr><td>Art. 6 Abs. 1 lit. c DSGVO</td><td>Erfüllung rechtlicher Verpflichtungen</td></tr>
+        <tr><td>Art. 6 Abs. 1 lit. f DSGVO</td><td>Berechtigte Interessen des Vereins</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <section id="hosting">
+    <h2><span class="num">§ 3</span> Hosting &amp; Server-Log-Dateien</h2>
+    <p>Unsere Webseite wird bei folgendem Anbieter gehostet:</p>
+    <div class="highlight">
+      <p><mark class="placeholder">Name des Hosting-Anbieters, Adresse, Land</mark></p>
+    </div>
+    <p>Beim Aufruf unserer Webseite werden durch den Hosting-Anbieter automatisch sogenannte Server-Log-Dateien erfasst. Diese enthalten:</p>
+    <ul>
+      <li>IP-Adresse des anfragenden Geräts (anonymisiert)</li>
+      <li>Datum und Uhrzeit des Zugriffs</li>
+      <li>Name und URL der abgerufenen Datei</li>
+      <li>Webseite, von der aus der Zugriff erfolgte (Referrer-URL)</li>
+      <li>Verwendeter Browser und Betriebssystem</li>
+    </ul>
+    <p>Die Verarbeitung erfolgt auf Grundlage unserer berechtigten Interessen gemäß Art. 6 Abs. 1 lit. f DSGVO zur Sicherstellung des technischen Betriebs. Die Daten werden nach spätestens <mark class="placeholder">7</mark> Tagen gelöscht, soweit kein konkreter Missbrauchsverdacht vorliegt.</p>
+  </section>
+
+
+  <section id="cookies">
+    <h2><span class="num">§ 4</span> Cookies &amp; Tracking</h2>
+    <p>Unsere Webseite verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden und die Ihren Browser beim nächsten Besuch wiedererkennen.</p>
+    <h3>Technisch notwendige Cookies</h3>
+    <p>Technisch notwendige Cookies werden ohne Ihre Einwilligung gesetzt, da sie für den technischen Betrieb der Webseite unerlässlich sind (Art. 6 Abs. 1 lit. f DSGVO). Hierzu zählen Session-Cookies, die nach dem Schließen des Browsers automatisch gelöscht werden.</p>
+    <h3>Analyse- und Marketing-Cookies</h3>
+    <p>Sofern wir Analyse-Tools oder Drittanbieter-Dienste einsetzen, erfolgt dies nur mit Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+    <div class="highlight">
+      <p><strong>Hinweis:</strong> <mark class="placeholder">Bitte ergänzen Sie hier die konkret eingesetzten Analyse-Dienste (z. B. Matomo, Plausible, Google Analytics) mit den jeweiligen Angaben zu Anbieter, Speicherdauer und Opt-out-Möglichkeit.</mark></p>
+    </div>
+    <h3>Cookie-Einstellungen verwalten</h3>
+    <p>Sie können die Speicherung von Cookies in Ihren Browsereinstellungen jederzeit deaktivieren oder bereits gespeicherte Cookies löschen. Bitte beachten Sie, dass die vollständige Deaktivierung von Cookies die Funktionalität unserer Webseite beeinträchtigen kann.</p>
+  </section>
+
+
+  <section id="kontakt">
+    <h2><span class="num">§ 5</span> Kontaktformular</h2>
+    <p>Auf unserer Webseite steht ein Kontaktformular zur Verfügung. Wenn Sie dieses nutzen, werden die von Ihnen eingegebenen Daten zur Bearbeitung Ihrer Anfrage bei uns gespeichert.</p>
+    <h3>Erhobene Daten</h3>
+    <ul>
+      <li>Name (Pflichtfeld)</li>
+      <li>E-Mail-Adresse (Pflichtfeld)</li>
+      <li>Betreff und Nachrichtentext</li>
+      <li><mark class="placeholder">Weitere optionale Felder ergänzen</mark></li>
+    </ul>
+    <h3>Zweck und Rechtsgrundlage</h3>
+    <p>Die Verarbeitung erfolgt zur Bearbeitung Ihrer Kontaktanfrage auf Grundlage unserer berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO) bzw. zur Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO).</p>
+    <h3>Speicherdauer</h3>
+    <p>Ihre Anfrage und die damit verbundenen Daten werden nach abschließender Bearbeitung gelöscht, spätestens jedoch nach <mark class="placeholder">6 Monaten</mark>, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+  </section>
+
+
+  <section id="newsletter">
+    <h2><span class="num">§ 6</span> Newsletter</h2>
+    <p>Wenn Sie unseren Newsletter abonnieren möchten, benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, die die Überprüfung erlauben, dass Sie der Inhaber der angegebenen E-Mail-Adresse sind und mit dem Empfang des Newsletters einverstanden sind.</p>
+    <h3>Double-Opt-in-Verfahren</h3>
+    <p>Wir verwenden das sogenannte Double-Opt-in-Verfahren. Nach Ihrer Anmeldung erhalten Sie eine E-Mail mit einem Bestätigungslink. Erst nach dem Klick auf diesen Link wird Ihre Anmeldung wirksam. Dies dient dem Schutz vor Missbrauch.</p>
+    <h3>Verarbeitete Daten</h3>
+    <ul>
+      <li>E-Mail-Adresse</li>
+      <li>Name (optional)</li>
+      <li>IP-Adresse zum Zeitpunkt der Anmeldung</li>
+      <li>Datum und Uhrzeit der Anmeldung und Bestätigung</li>
+    </ul>
+    <h3>Rechtsgrundlage</h3>
+    <p>Die Verarbeitung erfolgt auf Grundlage Ihrer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.</p>
+    <h3>Widerruf</h3>
+    <p>Sie können Ihre Einwilligung zum Empfang des Newsletters jederzeit widerrufen. In jedem Newsletter befindet sich ein Abmelde-Link. Alternativ können Sie uns Ihren Widerruf per E-Mail an <mark class="placeholder">datenschutz@vereinsname.de</mark> mitteilen.</p>
+    <h3>Newsletter-Versand</h3>
+    <div class="highlight">
+      <p><mark class="placeholder">Sofern Sie einen externen Newsletter-Dienstleister nutzen (z. B. Mailchimp, Brevo/Sendinblue, CleverReach), ergänzen Sie hier Name, Adresse des Anbieters sowie Hinweise zur Datenübermittlung und Auftragsverarbeitung gemäß Art. 28 DSGVO.</mark></p>
+    </div>
+  </section>
+
+
+  <section id="mitgliedschaft">
+    <h2><span class="num">§ 7</span> Online-Mitgliedsantrag</h2>
+    <p>Über unsere Webseite bieten wir die Möglichkeit, einen Mitgliedsantrag online zu stellen. Die hierbei erhobenen Daten dienen der Begründung und Verwaltung der Vereinsmitgliedschaft.</p>
+    <h3>Erhobene Daten</h3>
+    <ul>
+      <li>Vor- und Nachname</li>
+      <li>Geburtsdatum</li>
+      <li>Anschrift (Straße, PLZ, Ort)</li>
+      <li>E-Mail-Adresse</li>
+      <li>Telefonnummer (optional)</li>
+      <li><mark class="placeholder">Weitere vereinsrelevante Angaben (z. B. Sparte, Beitragskategorie)</mark></li>
+    </ul>
+    <h3>Zweck und Rechtsgrundlage</h3>
+    <p>Die Verarbeitung ist für die Erfüllung des Mitgliedschaftsvertrages und die Verwaltung der Vereinsmitgliedschaft erforderlich (Art. 6 Abs. 1 lit. b DSGVO) sowie zur Erfüllung gesetzlicher Pflichten (Art. 6 Abs. 1 lit. c DSGVO).</p>
+    <h3>Datenweitergabe</h3>
+    <p>Im Rahmen des Vereinsbetriebs können Ihre Daten an folgende Stellen weitergegeben werden:</p>
+    <ul>
+      <li>Zuständige Verbände und Dachorganisationen, soweit für die Mitgliedschaft erforderlich</li>
+      <li>Steuerberater / Wirtschaftsprüfer des Vereins (soweit erforderlich)</li>
+      <li><mark class="placeholder">Weitere Empfänger ergänzen</mark></li>
+    </ul>
+    <h3>Speicherdauer</h3>
+    <p>Mitgliederdaten werden für die Dauer der Mitgliedschaft gespeichert. Nach Beendigung der Mitgliedschaft werden die Daten entsprechend der gesetzlichen Aufbewahrungsfristen (in der Regel 10 Jahre gemäß HGB/AO) aufbewahrt und anschließend gelöscht.</p>
+  </section>
+
+
+  <section id="rechte">
+    <h2><span class="num">§ 8</span> Ihre Rechte als betroffene Person</h2>
+    <p>Gemäß DSGVO stehen Ihnen folgende Rechte zu:</p>
+    <div class="rights-grid">
+      <div class="right-card">
+        <strong>Auskunft (Art. 15)</strong>
+        <span>Sie haben das Recht, Auskunft über Ihre gespeicherten personenbezogenen Daten zu erhalten.</span>
+      </div>
+      <div class="right-card">
+        <strong>Berichtigung (Art. 16)</strong>
+        <span>Sie können die Berichtigung unrichtiger oder unvollständiger Daten verlangen.</span>
+      </div>
+      <div class="right-card">
+        <strong>Löschung (Art. 17)</strong>
+        <span>Sie können die Löschung Ihrer Daten verlangen, sofern keine Aufbewahrungspflichten entgegenstehen.</span>
+      </div>
+      <div class="right-card">
+        <strong>Einschränkung (Art. 18)</strong>
+        <span>Sie können die Einschränkung der Verarbeitung Ihrer Daten verlangen.</span>
+      </div>
+      <div class="right-card">
+        <strong>Datenübertragbarkeit (Art. 20)</strong>
+        <span>Sie können Ihre Daten in einem strukturierten, gängigen Format erhalten.</span>
+      </div>
+      <div class="right-card">
+        <strong>Widerspruch (Art. 21)</strong>
+        <span>Sie können der Verarbeitung Ihrer Daten aus berechtigten Interessen jederzeit widersprechen.</span>
+      </div>
+    </div>
+    <h3>Widerruf von Einwilligungen</h3>
+    <p>Soweit die Verarbeitung auf Ihrer Einwilligung beruht, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt unberührt.</p>
+    <h3>Beschwerderecht</h3>
+    <p>Sie haben das Recht, sich bei der zuständigen Datenschutz-Aufsichtsbehörde zu beschweren. Die zuständige Aufsichtsbehörde für <mark class="placeholder">Bundesland</mark> ist:</p>
+    <div class="highlight">
+      <p><mark class="placeholder">Name und Adresse der Landesbehörde für Datenschutz einfügen (z. B. Landesbeauftragte/r für Datenschutz und Informationsfreiheit)</mark></p>
+    </div>
+  </section>
+
+
+  <section id="sicherheit">
+    <h2><span class="num">§ 9</span> Datensicherheit</h2>
+    <p>Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre Daten gegen zufällige oder vorsätzliche Manipulationen, Verlust, Zerstörung oder gegen den Zugriff unberechtigter Personen zu schützen. Unsere Sicherheitsmaßnahmen werden entsprechend der technologischen Entwicklung fortlaufend verbessert.</p>
+    <p>Die Datenübertragung auf unserer Webseite erfolgt verschlüsselt mittels SSL/TLS-Protokoll. Eine verschlüsselte Verbindung erkennen Sie an dem Schloss-Symbol in der Adresszeile Ihres Browsers sowie der Nutzung von <em>https://</em>.</p>
+  </section>
+
+
+  <section id="aenderungen">
+    <h2><span class="num">§ 10</span> Änderungen dieser Datenschutzerklärung</h2>
+    <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie stets den aktuellen rechtlichen Anforderungen entsprechen zu lassen oder um Änderungen unserer Leistungen umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p>
+    <p>Bei wesentlichen Änderungen werden wir Sie gesondert informieren, sofern wir über Ihre Kontaktdaten verfügen.</p>
+  </section>
+
+
+  <footer>
+    <span><mark class="placeholder">Vereinsname e. V.</mark> · Stand: <mark class="placeholder">Monat Jahr</mark></span>
+    <span>Erstellt gemäß DSGVO und BDSG</span>
+  </footer>
+
+</div>
+</body>
+</html>

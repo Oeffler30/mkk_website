@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	// import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import * as m from '$lib/paraglide/messages.js';
 	import { localeFromPathname } from '$lib/locale-from-path.js';
 
-	const locale = $derived(localeFromPathname(page.url.pathname, base));
+	const locale = $derived(localeFromPathname(page.url.pathname));
 	const msg = $derived({ locale } as const);
 </script>
 

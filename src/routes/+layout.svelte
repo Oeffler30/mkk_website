@@ -1,14 +1,25 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { env } from '$env/dynamic/public';
 	import { base } from '$app/paths';
 	import { appResolve } from '$lib/app-resolve.js';
-	import { page } from '$app/state';
-	import * as m from '$lib/paraglide/messages.js';
 	import CookieBanner from '$lib/components/CookieBanner.svelte';
+	import SocialFooterIcons from '$lib/components/SocialFooterIcons.svelte';
 	import { openCookieSettings } from '$lib/cookie-consent-ui.js';
 	import { localeFromPathname } from '$lib/locale-from-path.js';
+	import * as m from '$lib/paraglide/messages.js';
+	import { page } from '$app/state';
+	import {
+		DEFAULT_SOCIAL_DISCORD_HREF,
+		DEFAULT_SOCIAL_INSTAGRAM_HREF
+	} from '$lib/site-social.js';
 	import { deLocalizeHref, localizeHref, setLocale } from '$lib/paraglide/runtime.js';
 	import './layout.css';
+
+	function envPublicOr(ss: string | undefined, fallback: string): string {
+		const v = typeof ss === 'string' ? ss.trim() : '';
+		return v.length > 0 ? v : fallback;
+	}
 
 	const { children } = $props();
 
@@ -41,6 +52,11 @@
 	const enHref = $derived(appResolve(localizeHref(delocalizedPath, { locale: 'en' })));
 
 	const msg = $derived({ locale } as const);
+
+	const socialInstagramHref = $derived(
+		envPublicOr(env.PUBLIC_INSTAGRAM_URL, DEFAULT_SOCIAL_INSTAGRAM_HREF)
+	);
+	const socialDiscordHref = $derived(envPublicOr(env.PUBLIC_DISCORD_URL, DEFAULT_SOCIAL_DISCORD_HREF));
 
 	const brandLogoSrc = $derived(`${base}/logo_metalparty.png`);
 
@@ -249,7 +265,15 @@
 				</span>
 				<span class="mt-1 block text-pretty text-zinc-600">{m.footer_tagline({}, msg)}</span>
 			</p>
-			<div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-end">
+			<div
+				class="flex flex-wrap items-center justify-end gap-3 sm:gap-x-4 sm:gap-y-3"
+			>
+				<SocialFooterIcons
+					instagramHref={socialInstagramHref}
+					discordHref={socialDiscordHref}
+					labelInstagram={m.footer_social_instagram_aria({}, msg)}
+					labelDiscord={m.footer_social_discord_aria({}, msg)}
+				/>
 				<a
 					href={imprintHref}
 					class="inline-flex min-h-11 items-center justify-center rounded border border-zinc-700 bg-zinc-900/60 px-4 text-sm font-semibold tracking-wide text-zinc-300 uppercase transition-colors hover:border-red-800/60 hover:bg-red-950/30 hover:text-red-200 active:bg-red-950/50"
